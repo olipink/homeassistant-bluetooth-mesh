@@ -81,10 +81,10 @@ ps -ef | grep gateway
 kill <PID>
 ```
 
-I placed the configuration files in `/config`, so you need to add `--basedir /config` to every command. So for example the scan command would look like this:
+I placed the configuration files in `/var/lib/bluetooth/mesh`, so you need to add `--basedir /var/lib/bluetooth/mesh` to every command. So for example the scan command would look like this:
 
 ```
-python3 gateway.py --basedir /config scan
+python3 gateway.py --basedir /var/lib/bluetooth/mesh scan
 ```
 
 Once you are done, switch back to the host system (simply `exit`) and restart the container for the changes to take effect.
@@ -111,7 +111,7 @@ Calling `python3 gateway.py` without further arguments will start the MQTT gatew
 
 **Make sure you know how to reset your device in case something goes wrong here.** Also it might be neccessary to edit the `store.yaml` by hand in case something fails.
 
-_Remember that you need to add the `--basedir /config` switch after `gateway.py` if you are using the command line within docker._
+_Remember that you need to add the `--basedir /var/lib/bluetooth/mesh` switch after `gateway.py` if you are using the command line within docker._
 
 1. Scan for unprovisioned devices with `python3 gateway.py scan`.
 1. Create an entry for the device(s) you want to add in the `config.yaml`.
