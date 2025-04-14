@@ -18,7 +18,6 @@ prompt-toolkit==2.0.10
 pycparser==2.21
 pymesh==1.0.2
 pyparsing==3.0.9
-PyYAML==6.0
 six==1.16.0
 typing-extensions==4.3.0
 wcwidth==0.2.5

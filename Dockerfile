@@ -22,7 +22,7 @@ RUN sh ./install-json-c.sh
 # install bridge
 WORKDIR /opt/hass-ble-mesh
 COPY ./requirements.txt .
-RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade pip && pip3 install "cython<3.0.0" wheel && pip install "pyyaml==6.0" --no-build-isolation && pip3 install -r requirements.txt
 
 WORKDIR /opt/hass-ble-mesh
 COPY ./gateway gateway
