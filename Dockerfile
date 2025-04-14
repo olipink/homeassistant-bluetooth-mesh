@@ -1,4 +1,4 @@
-FROM python:3.10-bullseye
+FROM balenalib/rpi-python:3.10.10-bullseye-build-20231106
 
 RUN apt-get -y update && apt-get -y upgrade && apt-get -y install \
     build-essential \
